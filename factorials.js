@@ -2,7 +2,7 @@ const readline=require("readline");
 
 const r1 = readline.createInterface({
     input: process.stdin,
-    output: process.stdout
+    outcleput: process.stdout
 })
 
 console.log("Factorial Application");
