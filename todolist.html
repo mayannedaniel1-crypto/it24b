@@ -59,8 +59,48 @@
         li.remove();
     }
 
+
+
+function creationEditButton(li,taskSpan){
+    const editBtn = document.createElement("button");
+    editBtn.textContent ="Edit";
+    editBtn.ClassName = "edit-btn";
+    editBtn.style.marginLeft = "8px";
+    editBtn.onclick = () => handleEditClick(li);
+
+    console.log("createEditButton() called =>", taskSpan.textContent);
+    return editBtn;
+
+}
+function handleEditClick(li){
+    const currentText = lifirstChild.textContent.trim();
+    cosole.log("handleEditClick() -> current:"currentText, Date());
+     
+    const newText = promt("Edit your task", currentText);
+
+    if(newText !-- null && newText.trim() !==""){
+        li.fristChild.textContent = newText.trim();
+        console.log("handleEditClick() -> update to: ", newText.trim(, Date());
+
+    }else{
+        console.log("hanldeEditClick -> no change made");
+    }
+}
+
+function createDoneButton(taskSpan){
+    const doneBtn = document.createElement("button");
+    doneBtn.textContent = "done";
+    doneBtn.onclick = () =>{
+        console.log(li);
+
+        //taskSpan.classlist.add("done");
+        const buttons =li.querySelectorAll("Button");
+
+        console.log("Task Compeleted", ;i.textContent, Date());
+    }
+    return doneBtn;
+}
+
 </script>
-
-
 </body>
 </html>
